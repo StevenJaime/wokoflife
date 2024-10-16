@@ -16,7 +16,7 @@ function App() {
 },[])
 
   return (
-    <BrowserRouter>    
+    <BrowserRouter basename={import.meta.env.BASE_URL} >    
        <Navbar searchFilter={searchFilter} setSearchFilter={setSearchFilter} />
        <Routes>
           <Route path='/' exact element={<Hero meals={meals} setMeals={setMeals} />} />
